@@ -1,9 +1,10 @@
+![Dunno?](/dunno.jpeg?raw=true)
+Got weird user complaint and can't find the problem?
 
 Dunno?
 ==
-- got weird user complaint and can't find the problem?
 - dunno what actions user did, where clicked, on which page
-- dunno if he had JS errors 10 sec ago? 20 sec ago?
+- dunno where he was 5 sec ago? maybe JS errors 10 sec ago?
 - dunno the root cause?
 
 Dunno helps you to reproduce and fix reported user problems.
@@ -25,7 +26,7 @@ window.onerror = function() {
 };
 ```
 
-User jumps between pages, does weird stuff, gets an error - you get retro steps.
+User jumps between pages, does weird stuff, gets an error - you get repro steps.
 
 ```
 url: /logout
