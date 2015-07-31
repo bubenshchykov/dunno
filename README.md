@@ -1,10 +1,12 @@
-Dunno helps you to reproduce and fix reported user problems.
 
 Dunno?
 ==
+- got weird user complaint and can't find the problem?
 - dunno what actions user did, where clicked, on which page
 - dunno if he had JS errors 10 sec ago? 20 sec ago?
-- dunno root cause?
+- dunno the root cause?
+
+Dunno helps you to reproduce and fix reported user problems.
 
 Usage
 ==
