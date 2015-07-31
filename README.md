@@ -1,10 +1,10 @@
-Got weird user complaint and can't find the problem?
+Got weird user complaint but can't find the problem?
 
 ![Dunno?](/dunno.jpeg?raw=true)
 
 Dunno?
 ==
-- dunno what actions user did, where clicked, on which page
+- dunno what actions user did, where clicked, on which page?
 - dunno where he was 5 sec ago? maybe JS errors 10 sec ago?
 - dunno the root cause?
 
