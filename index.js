@@ -3,6 +3,7 @@
 (function(exports) {
 
 	var key = 'dunno#v0.0.0';
+	var sep = ' ~\n';
 	var mask = '<:tag id=":id" cl=":class">:info</:tag>';
 	var limit = 20;
 	var urlcheck = 100;
@@ -18,10 +19,10 @@
 
 		var push = function(entry) {
 			var rec = window.localStorage.getItem(key) || '';
-			var entries = rec.split(' ~\n');
+			var entries = rec.split(sep);
 			entries = entries.slice(-opts.limit +1);
 			entries.push(entry);
-			window.localStorage.setItem(key, entries.join(' ~\n'));
+			window.localStorage.setItem(key, entries.join(sep));
 		};
 
 		var locate = function() {
@@ -69,7 +70,8 @@
 	};
 	
 	exports.tell = function(){
-		return window.localStorage.getItem(key) || '';
+		var rec = window.localStorage.getItem(key) || '';
+		return rec.split(sep).reverse().join(sep);
 	};
 
 })(typeof exports === 'undefined' ? this.dunno = {} : exports);
