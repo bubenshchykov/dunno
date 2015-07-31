@@ -1,13 +1,15 @@
-Dunno gets user context for tracking client errors.
+Dunno helps you to reproduce and fix reported user problems.
 
-Dunno will help if you
-- dunno what happend with a user at some point
-- dunno what actions he did, where clicked, on which page
-- dunno if he had JS errors 10 seconds ago
+Dunno?
+==
+- dunno what actions user did, where clicked, on which page
+- dunno if he had JS errors 10 sec ago? 20 sec ago?
+- dunno root cause?
 
-Dunno will help you to reproduce and fix.
-
-```<script src="dunno.js"></script>``` or ```npm install dunno``` for browserify.
+Usage
+==
+```<script src="dunno.js"></script>```
+or ```npm install dunno``` for browserify.
 
 ```js
 dunno.start({
@@ -15,8 +17,15 @@ dunno.start({
   urlcheck: 100 // interval to spot url changes in ms
 });
 
-dunno.tell(); // gives a string which you can post to LogEntries, MixPanel, anywhere
+window.onerror = function() {
+  var reproSteps = dunno.tell();
+  console.log(reproSteps);
+};
+```
 
+User jumps between pages, does weird stuff, gets an error - you get retro steps.
+
+```
 url: /logout
 error: Uncaught ReferenceError: invoiceState is not defined
 url: /sets/55b941e794a73c03008db78c ~
