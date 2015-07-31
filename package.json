@@ -1,0 +1,25 @@
+{
+  "name": "dunno",
+  "version": "0.0.0",
+  "description": "dunno? here you go.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bubenshchykov/dunno.git"
+  },
+  "keywords": [
+    "tracking",
+    "browser",
+    "error",
+    "history"
+  ],
+  "author": "bubenshchykov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bubenshchykov/dunno/issues"
+  },
+  "homepage": "https://github.com/bubenshchykov/dunno"
+}
