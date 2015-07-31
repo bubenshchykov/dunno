@@ -1,5 +1,6 @@
-![Dunno?](/dunno.jpeg?raw=true)
 Got weird user complaint and can't find the problem?
+
+![Dunno?](/dunno.jpeg?raw=true)
 
 Dunno?
 ==
