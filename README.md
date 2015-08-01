@@ -12,8 +12,7 @@ Dunno gives you a clear steps to reproduce.
 
 Do know!
 ==
-Add script ```<script src="dunno.js"></script>```
-or require for browserify
+Add dunno.js to the page, or require for browserify
 ```
 npm install dunno;
 var dunno = require('dunno')
