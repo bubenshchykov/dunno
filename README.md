@@ -26,7 +26,7 @@ window.onerror = function() {
 };
 ```
 
-User jumps between pages, does weird stuff, gets an error. Dunno tells you repro-steps.
+User jumps between pages, does weird stuff, gets an error. Dunno tells you steps to reproduce.
 
 ```
 error: Uncaught ReferenceError: invoiceState is not defined
