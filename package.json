@@ -1,7 +1,7 @@
 {
   "name": "dunno",
-  "version": "0.0.1",
-  "description": "dunno? here you go.",
+  "version": "0.0.2",
+  "description": "track last N user actions at any point of time",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

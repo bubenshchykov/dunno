@@ -38,6 +38,7 @@
 				locate();
 			}, urlcheck);
 			
+			var _onclick = document.onclick;
 			document.onclick = function(e) {
 				var el = e.target;
 				
@@ -53,23 +54,27 @@
 					.replace(':info', info);
 					
 				push('click: ' + entry);
-			};
-
-			window.onerror = function (msg) {
-				push('error: ' + msg.slice(0, 50));
+				if (typeof _onclick === 'function') return _onclick.apply(this, arguments);
 			};
 			
+			var _onerror = window.onerror;
+			window.onerror = function (msg) {
+				push('error: ' + msg.slice(0, 50));
+				if (typeof _onerror === 'function') return _onerror.apply(this, arguments);
+			};
+			
+			var _onbu = window.onbeforeunload;
 			window.onbeforeunload = function() {
 				push('away');
+				if (typeof _onbu === 'function') return _onbu.apply(this, arguments);
 			};
 		};
 
 		['complete', 'interactive'].indexOf(document.readyState) === -1 ?
-			document.addEventListener('DOMContentLoaded', track) :
-			track();
+			document.addEventListener('DOMContentLoaded', track) : track();
 	};
 	
-	exports.tell = function(){
+	exports.tell = function(opts){
 		var rec = window.localStorage.getItem(key) || '';
 		return rec.split(sep).reverse().join(sep);
 	};
