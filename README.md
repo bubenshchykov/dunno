@@ -4,7 +4,7 @@ Got weird user complaint but can't find the problem?
 
 Dunno?
 ==
-- dunno what user did, where clicked, on which pages?
+- dunno what user did, where he clicked, on which pages?
 - dunno where he was 5 sec ago? maybe JS errors 10 sec ago?
 - dunno the root cause?
 
@@ -14,8 +14,8 @@ Do know!
 ==
 Add dunno.js to the page, or require for browserify
 ```
-npm install dunno;
-var dunno = require('dunno')
+npm install dunno
+var dunno = require('dunno');
 ```
 
 Start tracking asap
