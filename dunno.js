@@ -2,12 +2,13 @@
 
 (function(exports) {
 
-	var key = 'dunno#v0.0.0';
+	var key = 'dunno#v0.0.3';
 	var sep = ' ~\n';
 	var mask = '<:tag id=":id" cl=":class">:info</:tag>';
 	var limit = 10;
 	var urlcheck = 100;
 	var started, href;
+	var storage = window.localStorage;
 
 	exports.start = function(opts) {
 		if (started) return;
@@ -18,11 +19,11 @@
 		opts.urlcheck = opts.urlcheck || urlcheck;
 
 		var push = function(entry) {
-			var rec = window.localStorage.getItem(key) || '';
+			var rec = storage.getItem(key) || '';
 			var entries = rec.split(sep);
 			entries = entries.slice(-opts.limit +1);
 			entries.push(entry);
-			window.localStorage.setItem(key, entries.join(sep));
+			storage.setItem(key, entries.join(sep));
 		};
 
 		var locate = function() {
@@ -31,6 +32,17 @@
 		};
 
 		var track = function() {
+
+			try {
+				storage.setItem(key + '-ping', 1);
+				storage.removeItem(key + '-ping');
+			} catch (e) {
+				storage = {
+					data: {},
+					setItem: function(key, val) {this.data[key] = val},
+					getItem: function(key) {return this.data[key]}
+				};
+			};
 			
 			setInterval(function() {
 				if (window.location.href === href) return;
@@ -75,7 +87,7 @@
 	};
 	
 	exports.tell = function(opts){
-		var rec = window.localStorage.getItem(key) || '';
+		var rec = storage.getItem(key) || '';
 		return rec.split(sep).reverse().join(sep);
 	};
 
