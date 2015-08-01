@@ -1,4 +1,4 @@
-Got weird user complaint but can't find the problem?
+Got weird user complaint but can't reproduce?
 
 ![Dunno?](/dunno.jpeg?raw=true)
 
@@ -7,8 +7,6 @@ Dunno?
 - dunno what user did, where he clicked, on which pages?
 - dunno where he was 5 sec ago? maybe JS errors 10 sec ago?
 - dunno the root cause?
-
-Dunno gives you a clear steps to reproduce.
 
 Do know!
 ==
@@ -28,7 +26,7 @@ window.onerror = function() {
 };
 ```
 
-User jumps between pages, does weird stuff, gets an error - you get repro steps.
+User jumps between pages, does weird stuff, gets an error. Dunno tells you repro-steps.
 
 ```
 error: Uncaught ReferenceError: invoiceState is not defined
