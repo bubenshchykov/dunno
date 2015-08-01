@@ -1,22 +1,19 @@
-Got weird user complaint but can't find the problem?
+Got weird user complaint but can't reproduce?
 
 ![Dunno?](/dunno.jpeg?raw=true)
 
 Dunno?
 ==
-- dunno what user did, where clicked, on which pages?
+- dunno what user did, where he clicked, on which pages?
 - dunno where he was 5 sec ago? maybe JS errors 10 sec ago?
 - dunno the root cause?
 
-Dunno gives you a clear steps to reproduce.
-
 Do know!
 ==
-Add script ```<script src="dunno.js"></script>```
-or require for browserify
+Add dunno.js to the page, or require for browserify
 ```
-npm install dunno;
-var dunno = require('dunno')
+npm install dunno
+var dunno = require('dunno');
 ```
 
 Start tracking asap
@@ -29,7 +26,7 @@ window.onerror = function() {
 };
 ```
 
-User jumps between pages, does weird stuff, gets an error - you get repro steps.
+User jumps between pages, does weird stuff, gets an error. Dunno tells you steps to reproduce.
 
 ```
 error: Uncaught ReferenceError: invoiceState is not defined
