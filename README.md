@@ -4,26 +4,22 @@ Got weird user complaint but can't find the problem?
 
 Dunno?
 ==
-- dunno what actions user did, where clicked, on which page?
+- dunno what user did, where clicked, on which pages?
 - dunno where he was 5 sec ago? maybe JS errors 10 sec ago?
 - dunno the root cause?
 
-Dunno helps you to reproduce and fix reported user problems.
+Dunno gives you a clear steps to reproduce.
 
 Usage
 ==
-```<script src="dunno.js"></script>```
-or ```npm install dunno``` for browserify.
+```<script src="dunno.js"></script>``` or
+```npm install dunno``` for browserify.
 
 ```js
-dunno.start({
-  limit: 10, // number of last user actions to track
-  urlcheck: 100 // interval to spot url changes in ms
-});
+dunno.start(); // opts {limit: 10, urlcheck: 100}
 
 window.onerror = function() {
-  var reproSteps = dunno.tell();
-  console.log(reproSteps);
+  console.log(dunno.tell());
 };
 ```
 
@@ -42,4 +38,4 @@ error: Uncaught TypeError: saveInvoice is not a function
 away ~
 ```
 
-Here you go.
+Just post ```dunno.tell()``` to LogEntries or whatever you use. Now you know!
