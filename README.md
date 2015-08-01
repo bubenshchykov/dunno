@@ -10,10 +10,16 @@ Dunno?
 
 Dunno gives you a clear steps to reproduce.
 
-Usage
+Do know!
 ==
-```<script src="dunno.js"></script>``` or
-```npm install dunno``` for browserify.
+Add script ```<script src="dunno.js"></script>```
+or require for browserify
+```
+npm install dunno;
+var dunno = require('dunno')
+```
+
+Start tracking asap
 
 ```js
 dunno.start(); // opts {limit: 10, urlcheck: 100}
@@ -26,16 +32,16 @@ window.onerror = function() {
 User jumps between pages, does weird stuff, gets an error - you get repro steps.
 
 ```
-url: /logout
 error: Uncaught ReferenceError: invoiceState is not defined
 url: /sets/55b941e794a73c03008db78c ~
-click: <a cl="set-tab ">ZZ</a> ~
+click: <a cl="set-tab hidden"></a> ~
+click: <a cl="set-tab ">Coco</a> ~
 url: /games ~
-click: <a cl="app-logo icn-app-logo">Create</a> ~
-click: <body>Ooops, something bad</body> ~
+click: <div id="set-header">Create</a> ~
 url: /sets/55b941e794a73c03008db78c/55bbd7c2461ab603007d1648a ~
 error: Uncaught TypeError: saveInvoice is not a function
 away ~
+url: /all?cachereset=100023402
 ```
 
 Just post ```dunno.tell()``` to LogEntries or whatever you use. Now you know!
