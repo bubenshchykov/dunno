@@ -5,7 +5,7 @@
 	var key = 'dunno#v0.0.0';
 	var sep = ' ~\n';
 	var mask = '<:tag id=":id" cl=":class">:info</:tag>';
-	var limit = 20;
+	var limit = 10;
 	var urlcheck = 100;
 	var started, href;
 
