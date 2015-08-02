@@ -1,7 +1,8 @@
 var browser = require('zombie').create();
+var file = __dirname + '/example.html';
 
 browser
-	.visit('file://' + __dirname + '/example.html')
+	.visit('file://' + file)
 	.done(function() {
 		
 		browser.assert.text('title', 'dunno');
@@ -15,12 +16,13 @@ browser
 			
 			browser.assert.text('.report',
 				
-				'click: <a cl="error">now, click on me - I</a> ~ ' +
-				'url: /Users/alex/git/bub/dunno/example.html?jumped=elsewhere ~ ' +
+				('click: <a cl="error">now, click on me - I</a> ~ ' +
+				'url: :file?jumped=elsewhere ~ ' +
 				'click: <i cl="away">click to navigate</i> ~ ' +
 				'click: <textarea cl="bro">bro, click me too</textarea> ~ ' +
 				'click: <button cl="yo">yo, click me too</button> ~ ' +
-				'url: /Users/alex/git/bub/dunno/example.html ~');
+				'url: :file ~')
+					.replace(/:file/g, file));
 			
 			console.log('test passed');
 			process.exit(0);
