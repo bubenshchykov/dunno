@@ -12,7 +12,7 @@ Dunno?
 
 Do know!
 ==
-Add dunno.js to the page, or require for browserify
+Dunno gives you steps to reproduce. Add dunno.js to the page, or require for browserify
 ```
 npm install dunno
 var dunno = require('dunno');
@@ -28,7 +28,7 @@ window.onerror = function() {
 };
 ```
 
-User jumps between pages, does weird stuff, gets an error. Dunno tells you steps to reproduce.
+User jumps between pages, does weird stuff, gets an error. Dunno tells you why.
 
 ```
 error: Uncaught ReferenceError: invoiceState is not defined
