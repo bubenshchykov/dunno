@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/bubenshchykov/dunno/issues"
   },
-  "homepage": "https://github.com/bubenshchykov/dunno"
+  "homepage": "https://github.com/bubenshchykov/dunno",
+  "devDependencies": {
+    "zombie": "2.5.1"
+  }
 }

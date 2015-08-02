@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<title>dunno</title>
+		<script src="dunno.js"></script>
+		<style>
+			body * {
+				display: block;
+				width: 300px;
+				margin: 20px auto;
+				box-sizing: content-box;
+				text-align: center;
+				background: #bbffaa;
+				border: none;
+			}
+			h1, .intro {
+				background: none;
+			}
+			.check {
+				background: orange;
+			}
+			.report,
+			.report * {
+				background: orange;
+				margin: 0 auto;
+				text-align: left;
+				height: 200px;
+				width: 500px;
+				display: none;
+			}
+		</style>
+		<script>
+			dunno.start();
+
+			function fail() {
+				return a.b.c;
+			}
+			function navigate() {
+				window.location = window.location.href + '?jumped=elsewhere';
+			}
+			function report() {
+				var rep = document.querySelector('.report');
+				rep.innerHTML = dunno.tell();
+				rep.style.display = 'inherit';
+			}
+		</script>
+	</head>
+	<body>
+		<h1>dunno demo</h1>
+		<span class="intro">start clicking on elements in rendom order</span>
+		<div class="hey" id="wassup">hey, click me</div>
+		<button class="yo">yo, click me too</button>
+		<textarea class="bro">bro, click me too</textarea>
+		<a class="error" onclick="fail()">now, click on me - I'll trigger an error</a>
+		<i class="away" onclick="navigate()">click to navigate</i>
+		<i class="check" onclick="report()">click me to get a report</i>
+		<textarea class="report">report:</textarea>
+	</body>
+</html>
