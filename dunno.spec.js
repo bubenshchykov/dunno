@@ -2,11 +2,11 @@ var browser = require('zombie').create();
 
 var expected = 
 	'click: <a cl="error">now, click on me - I</a> ~ ' +
-	'url: /Users/alex/git/bub/dunno/demo.html?jumped=elsewhere ~ ' +
+	'url: /Users/alex/git/bub/dunno/example.html?jumped=elsewhere ~ ' +
 	'click: <i cl="away">click to navigate</i> ~ ' +
 	'click: <textarea cl="bro">bro, click me too</textarea> ~ ' +
 	'click: <button cl="yo">yo, click me too</button> ~ ' +
-	'url: /Users/alex/git/bub/dunno/demo.html ~';
+	'url: /Users/alex/git/bub/dunno/example.html ~';
 
 browser
 	.visit('file://' + __dirname + '/example.html')
