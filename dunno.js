@@ -2,7 +2,7 @@
 
 (function(exports) {
 
-	var key = 'dunno#v0.0.3';
+	var key = 'dunno#v0.0.5';
 	var sep = ' ~\n';
 	var mask = '<:tag id=":id" cl=":class">:info</:tag>';
 	var limit = 10;

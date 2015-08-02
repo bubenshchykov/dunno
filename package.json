@@ -1,6 +1,6 @@
 {
   "name": "dunno",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "track last N user actions at any point of time",
   "main": "dunno.js",
   "scripts": {
