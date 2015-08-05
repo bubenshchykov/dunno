@@ -44,3 +44,7 @@ url: /all?cachereset=100023402
 ```
 
 Just post ```dunno.tell()``` to LogEntries or whatever you use. Now you know!
+
+Example
+===
+![Dunno](https://dl.dropboxusercontent.com/u/17696220/dunno.png)
