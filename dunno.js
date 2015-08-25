@@ -2,7 +2,7 @@
 
 (function(exports) {
 
-	var key = 'dunno#v0.0.6';
+	var key = 'dunno#v0.0.7';
 	var sep = ' ~\n';
 	var mask = '<:tag id=":id" cl=":class">:info</:tag>';
 	var limit = 10;
@@ -72,7 +72,7 @@
 			
 			var _onerror = window.onerror;
 			window.onerror = function (msg) {
-				push('error: ' + msg.slice(0, 50));
+				push('error: ' + (msg || '').slice(0, 50));
 				if (typeof _onerror === 'function') return _onerror.apply(this, arguments);
 			};
 			
