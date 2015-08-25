@@ -2,13 +2,13 @@
 
 (function(exports) {
 
-	var key = 'dunno#v0.0.5';
+	var key = 'dunno#v0.0.6';
 	var sep = ' ~\n';
 	var mask = '<:tag id=":id" cl=":class">:info</:tag>';
 	var limit = 10;
 	var urlcheck = 100;
 	var started, href;
-	var storage = window.localStorage;
+	var storage;
 
 	exports.start = function(opts) {
 		if (started) return;
@@ -34,6 +34,7 @@
 		var track = function() {
 
 			try {
+				storage = window.localStorage
 				storage.setItem(key + '-ping', 1);
 				storage.removeItem(key + '-ping');
 			} catch (e) {
